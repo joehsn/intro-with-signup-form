@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Form from "./components/Form";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <div className="w-full lg:w-1/2 text-white space-y-4 text-center lg:text-start">
+        <h1 className="text-2xl lg:text-5xl">
+          Learn to code by watching others
+        </h1>
+        <div className="">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="w-full lg:w-1/2 space-y-3">
+        <div className="bg-tw-blue p-4 rounded-md w-full text-white text-center border-b-4 border-b-tw-dark-blue/30 ">
+          Try it free 7 days{" "}
+          <span className="text-tw-grayish-blue">then $20/mo. thereafter</span>
+        </div>
+        <Form />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
